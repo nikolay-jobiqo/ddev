@@ -21,7 +21,10 @@ This recipe adds an Apache Solr container to a project. It will set up a solr co
 ##### Drupal8-specific extra steps
 
 * `ddev start`
-* Enable the Search API Solr Search Defaults module
+* Install [Search API Solr](https://www.drupal.org/project/search_api_solr) module
+    * `ddev composer require drupal/search_api_solr`
+* Enable the [Search API Solr](https://www.drupal.org/project/search_api_solr) Search Defaults module
+    * `ddev drush en search_api_solr -y`
 * Add a solr server at `https://<projectname>>.ddev.site/en/admin/config/search/search-api/add-server`.
     * Use the "standard" Solr connector
     * Use the "http" protocol
